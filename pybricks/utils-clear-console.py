@@ -1,3 +1,5 @@
+from pybricks.tools import wait
+
 print("\x1b[H\x1b[2J", end="") #this will clear the console screen
 
 print("hello")
