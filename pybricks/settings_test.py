@@ -73,6 +73,7 @@ def settings_test():
         wait(2000)
         hub.speaker.beep()
         motor_right.run(1000)
+        # numbers above 1000 dont seem to do anything
         wait(2000)
         hub.speaker.beep()
         motor_right.run(2000)
