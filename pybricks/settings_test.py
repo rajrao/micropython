@@ -32,7 +32,11 @@ def settings_test():
     
     default_settings = drivebase.settings()
     print(default_settings)
-    calc_max = (default_settings[0]/0.4, default_settings[0]/0.02,default_settings[2]/0.335, default_settings[2]/0.017)
+    # default straight_speed is 40% of max speed.
+    # default straight_acceleration is 2% of max straight acceleration
+    # default turn_rate is 33% of max turn rate
+    # default turn_acceleration is 1.67% of max turn_acceleration
+    calc_max = (default_settings[0]*2.5, default_settings[0]*50,default_settings[2]*3, default_settings[2]*60)
     
     #settings found by testing different values until a ValueError: Invalid argument error was thrown
     drivebase.settings(straight_speed=970, straight_acceleration=9704,turn_rate=1327, turn_acceleration=13271)  
